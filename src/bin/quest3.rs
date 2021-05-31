@@ -25,6 +25,8 @@ fn primes(limit: usize) -> impl Iterator<Item = usize> {
 
     is_prime.into_iter()
         .enumerate()
-        .filter(|(_, is_prime)| *is_prime)
-        .map(|(prime, _)| prime)
+        .filter_map(|(num, is_prime)| match is_prime {
+            true => Some(num),
+            false => None,
+        })
 }
