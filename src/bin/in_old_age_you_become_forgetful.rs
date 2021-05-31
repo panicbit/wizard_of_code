@@ -1,4 +1,3 @@
-// Title: In Old Age You Become Forgetful
 
 fn main() {
     let target = 12345;
